@@ -1,13 +1,27 @@
-import tkinter as tk
-window = tk.Tk()
+from tkinter import *
 
-button = tk.Button(text='...', bg="white", fg="black")
-button.pack(pady = 20, padx = 20)
+def handle_click(event):
+    if gui["bg"] == "black":
+        gui.configure(bg = "yellow")
+        print('light is aan')
+    else:
+        gui.configure(bg = "black")
+        print('light is uit')
 
-# schijf hier tussen je code
+gui = Tk(className='lamp')
 
+gui.geometry("200x200")
 
+gui.configure(bg = "black")
 
-# schijf hier tussen je code
+button = Button(
+    gui,
+    text="click hier!!!",
+    bg = "white",
+    fg="black"
+)
 
-window.mainloop()
+button.bind("<Button-1>", handle_click)
+button.pack(pady = 50, padx = 40,)
+
+gui.mainloop()
