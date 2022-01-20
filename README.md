@@ -1,1 +1,1 @@
-# lightSwitchPython
+# lightSwitch
