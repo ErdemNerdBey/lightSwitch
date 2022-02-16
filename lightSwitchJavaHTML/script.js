@@ -1,10 +1,13 @@
-var btn = document.createElement('button');
-btn.style.margin = '10px';
-btn.innerHTML = '...';
-document.body.appendChild(btn);
+document.body.style.backgroundColor = "black";
 
-// schijf hier tussen je code
-
-
-
-// schijf hier tussen je code
+function achtergrondVeranderen() {
+    if (document.body.style.backgroundColor == "yellow") {
+        document.body.style.backgroundColor = "black";
+        console.log("licht is uit :(");
+        lichtKnop.innerText = "light is uit";
+    } else{
+        document.body.style.backgroundColor = "yellow";
+        console.log("licht is aan!!! :)");
+        lichtKnop.innerText = "light is aan";
+    }
+}  

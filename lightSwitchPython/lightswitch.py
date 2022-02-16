@@ -3,13 +3,19 @@ from tkinter import *
 def handle_click(event):
     if gui["bg"] == "black":
         gui.configure(bg = "yellow")
-        print('light is aan')
+        print('licht is aan')
+        button["text"] = "licht is aan"
+        button["bg"] = "black"
+        button["fg"] = "yellow"
     else:
         gui.configure(bg = "black")
         print('light is uit')
+        button["text"] = "licht is uit"
+        button["bg"] = "yellow"
+        button["fg"] = "black"
+
 
 gui = Tk(className='lamp')
-
 gui.geometry("200x200")
 
 gui.configure(bg = "black")
@@ -17,7 +23,7 @@ gui.configure(bg = "black")
 button = Button(
     gui,
     text="click hier!!!",
-    bg = "white",
+    bg = "yellow",
     fg="black"
 )
 
